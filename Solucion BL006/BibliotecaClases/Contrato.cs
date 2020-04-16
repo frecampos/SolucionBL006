@@ -35,7 +35,16 @@ namespace BibliotecaClases
         public string Rut
         {
             get { return _rut; }
-            set { _rut = value; }
+            set {
+                if (value.Trim().Length==10)
+                {
+                    _rut = value;
+                }
+                else
+                {
+                    throw new Exception("rut invalido");
+                }
+                 }
         }
 
         public Contrato()
